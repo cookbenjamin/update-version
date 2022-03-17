@@ -1,4 +1,4 @@
-name: Update Version
+name: Update Semantic Version
 description: Update a given semantic version by a release type ( MAJOR | MINOR | PATCH ) and prerelease tags ( alpha | beta | rc )
 author: Benjamin Cook
 branding:
