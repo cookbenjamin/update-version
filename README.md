@@ -36,7 +36,7 @@ The incremented version.
 
     - name: Bump release version
       id: bump_version
-      uses: cookbenjamin/increment-version@1.0.0
+      uses: cookbenjamin/update-version@v1.0.1
       with:
         current-version: '2.11.7'
         increment-version-fragment: 'MINOR'
@@ -49,7 +49,7 @@ The incremented version.
 
     - name: Bump release version
       id: bump_version
-      uses: cookbenjamin/increment-version@1.0.0
+      uses: cookbenjamin/update-version@v1.0.1
       with:
         current-version: '2.11.7-beta3'
         increment-version-fragment: 'NONE'
