@@ -1,0 +1,29 @@
+name: Update Version
+description: Update a given semantic version by a release type ( MAJOR | MINOR | PATCH ) and prerelease tags ( alpha | beta | rc )
+author: Benjamin Cook
+branding:
+  icon: 'tag'
+  color: 'green'
+inputs:
+  current-version:
+    description: 'The current semantic version you want to update'
+    required: true
+    default: NONE
+  increment-version-fragment:
+    description: 'The versions fragment you want to increment. possible options are [ NONE | MAJOR | MINOR | PATCH ]'
+    required: false
+    default: NONE
+  prerelease-fragment:
+    description: 'The prerelease fragment you want to remove or increment. possible options are [ REMOVE | ALPHA | BETA | RC ]'
+    required: false
+    default: REMOVE
+outputs:
+  updated-version:
+    description: 'The updated version'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.current-version }}
+    - ${{ inputs.increment-version-fragment }}
+    - ${{ inputs.prerelease-fragment }}
