@@ -42,7 +42,7 @@ The incremented version.
         increment-version-fragment: 'MINOR'
         prerelease-fragment: 'ALPHA'
     - name: Do something with your bumped release version
-      run: echo ${{ steps.bump_version.outputs.next-version }}
+      run: echo ${{ steps.bump_version.outputs.updated-version }}
       # will print 2.12.0-alpha1
 
 ### Moving from beta to production
@@ -55,9 +55,9 @@ The incremented version.
         increment-version-fragment: 'NONE'
         prerelease-fragment: 'REMOVE'
     - name: Do something with your bumped release version
-      run: echo ${{ steps.bump_version.outputs.next-version }}
+      run: echo ${{ steps.bump_version.outputs.updated-version }}
       # will print 2.11.7
-      
+
 ## input / output Examples
 
 | increment-version-fragment | prerelease-fragment  | current-version | output        |
